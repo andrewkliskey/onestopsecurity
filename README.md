@@ -16,7 +16,8 @@ wget https://raw.githubusercontent.com/andrewkliskey/onestopsecurity/master/ones
 chmod +x onestopsecurity.sh
 ./onestopsecurity.sh
 ```
-Disable SSH on root userl:
+Disable SSH on root user:
+
 To improve your security further disable ssh root access.
 This can be done by adding a # infront of "PermitRootLogin yes" within the SSH config file (/etc/ssh/sshd_config).
 
