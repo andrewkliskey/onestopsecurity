@@ -12,7 +12,7 @@ What can the program do?
 How to run:
 Download the script, adjust permissions and run:
 ```bash
-curl -O 
+curl -O https://raw.githubusercontent.com/andrewkliskey/onestopsecurity/master/onestopsecurity.sh
 chmod +x onestopsecurity.sh
 ./onestopsecurity.sh
 ```
