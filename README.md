@@ -40,6 +40,8 @@ This can be done manually by adding a # infront of "PermitRootLogin yes" within 
 Add validation to user inputs
 
 Adjust the Fail2ban config
+
+Allow users to change the SSH port more than once (currently running it twice will open both ports up for SSH).
   
   
   
