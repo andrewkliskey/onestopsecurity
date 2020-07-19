@@ -72,12 +72,9 @@ if [ "$updateanswer" == "y" ];
     then
     update
     housekeeping
-
-    echo
     echo 
     echo "- Update Complete! -"
     echo 
-    echo
 fi
 
 
