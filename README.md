@@ -29,6 +29,8 @@ Disable SSH root access.
 This can be done manually by adding a # infront of "PermitRootLogin yes" within the SSH config file (/etc/ssh/sshd_config).
 
 Add validation to user inputs
+
+Adjust the Fail2ban config
   
   
   
