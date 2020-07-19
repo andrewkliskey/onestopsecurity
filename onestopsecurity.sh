@@ -61,7 +61,7 @@ restartservices() {
 }
 
 #Intro
-echo 'Security Enhancement Script'
+echo 'OneStopSecurity'
 echo 'Lets get started, there is no time to waste!'
 echo ' '
 
