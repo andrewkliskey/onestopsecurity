@@ -34,14 +34,13 @@ chmod +x onestopsecurity.sh
 
 ### To-do
 
-Disable SSH root access.
-This can be done manually by adding a # infront of "PermitRootLogin yes" within the SSH config file (/etc/ssh/sshd_config).
+  - Disable SSH root access. This can be done manually by adding a # infront of "PermitRootLogin yes" within the SSH config file (/etc/ssh/sshd_config).
 
-Add validation to user inputs
+  - Add validation to user inputs
 
-Adjust the Fail2ban config
+  - Adjust the Fail2ban config
 
-Allow users to change the SSH port more than once (currently running it twice will open both ports up for SSH).
+  - Allow users to change the SSH port more than once (currently running it twice will open both ports up for SSH).
   
   
   
