@@ -16,6 +16,9 @@ wget https://raw.githubusercontent.com/andrewkliskey/onestopsecurity/master/ones
 chmod +x onestopsecurity.sh
 ./onestopsecurity.sh
 ```
+Disable SSH on root userl:
+To improve your security further disable ssh root access.
+This can be done by adding a # infront of "PermitRootLogin yes" within the SSH config file (/etc/ssh/sshd_config).
 
 OneStopSecurity has been tested on:
   - Ubuntu 20.04
@@ -23,7 +26,5 @@ OneStopSecurity has been tested on:
   - Debian 10.3
   - Debian 9.12
   
-To improve your security further disable ssh root access.
-This can be done by adding a # infront of "PermitRootLogin yes" within the SSH config file (/etc/ssh/sshd_config).
 
 If you would like any additional features please submit an Issue or Pull request.
