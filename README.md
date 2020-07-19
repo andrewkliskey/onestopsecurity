@@ -12,11 +12,11 @@ What can the program do?
 How to run:
 Download the script, adjust permissions and run:
 ```bash
-curl -O https://raw.githubusercontent.com/andrewkliskey/onestopsecurity/master/onestopsecurity.sh
+wget https://raw.githubusercontent.com/andrewkliskey/onestopsecurity/master/onestopsecurity.sh
 chmod +x onestopsecurity.sh
 ./onestopsecurity.sh
 ```
 
-Has been tested on Ubuntu 20.04
+Has been tested on Ubuntu 20.04 
 
 If you would like any additional features please submit an Issue or Pull request.
