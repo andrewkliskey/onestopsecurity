@@ -27,7 +27,7 @@ OneStopSecurity has been tested on:
   - Debian 10.3
   - Debian 9.12
 
-###To-do
+### To-do
 
 Disable SSH root access.
 This can be done manually by adding a # infront of "PermitRootLogin yes" within the SSH config file (/etc/ssh/sshd_config).
