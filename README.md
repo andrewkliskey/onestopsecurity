@@ -1,6 +1,6 @@
 # OneStopSecurity
 
-What can the program do?
+### What can the program do?
   - Update server (update, upgrade, dist-upgrade, autoremove, autoclean, updatedb)
   - Change SSH Port 
   - Install Fail2ban
@@ -9,19 +9,15 @@ What can the program do?
   - Choose Ports to allow incoming connections from
   - Install unattended-upgrades
 
-How to run:
+### How to run:
 Download the script, adjust permissions and run:
 ```bash
 wget https://raw.githubusercontent.com/andrewkliskey/onestopsecurity/master/onestopsecurity.sh
 chmod +x onestopsecurity.sh
 ./onestopsecurity.sh
 ```
-Disable SSH on root user:
 
-To improve your security further disable ssh root access.
-This can be done by adding a # infront of "PermitRootLogin yes" within the SSH config file (/etc/ssh/sshd_config).
-
-OneStopSecurity has been tested on:
+### OneStopSecurity has been tested on:
   - Ubuntu 20.04
   - Ubuntu 18.04
   - Debian 10.3
