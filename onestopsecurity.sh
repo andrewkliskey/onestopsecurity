@@ -1,5 +1,7 @@
 #!/bin/bash
 
+#Developed by https://github.com/andrewkliskey
+
 #Declaring Valiables
 sshconfig="/etc/ssh/sshd_config"
 sshport="22"
@@ -142,10 +144,14 @@ if [ "$unattendedupgradesanswer" == "y" ];
 fi
 
 
-echo "COMPLETE!"
 if [ "$sshanswer" == "y" ]; 
     then
     echo "Please now SSH to your server over port $sshport"
 
 fi
 restartservices
+
+echo "----------------------"
+echo "Thanks for using OneStopSecurity"
+echo "Please give this a star on GitHub if you found it useful - https://github.com/andrewkliskey/onestopsecurity"
+echo "----------------------"
