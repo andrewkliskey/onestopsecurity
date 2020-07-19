@@ -22,7 +22,7 @@ housekeeping() {
 }
 
 changesshport() {
-    read -p "What port do you want to ssh over? (Ideally use an Ephemeral Port 32768-60999): " sshport
+    read -p "What port would you like to use for SSH (Ideally use an Ephemeral Port 32768-60999): " sshport
     echo "Port $sshport" >> $sshconfig
 }
 
@@ -66,7 +66,7 @@ echo 'Lets get started, there is no time to waste!'
 echo ' '
 
 echo '--------Update and Upgrade--------'
-read -p "Before we start do you want to update all packages? (update, upgrade, dist-upgrade, autoremove, autoclean, updatedb) (y/n): " updateanswer
+read -p "Before we start, do you want to update all packages? (update, upgrade, dist-upgrade, autoremove, autoclean, updatedb) (y/n): " updateanswer
  
 if [ "$updateanswer" == "y" ]; 
     then
