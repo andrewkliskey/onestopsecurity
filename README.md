@@ -1,7 +1,7 @@
 # OneStopSecurity
 
 ### What can OneStopSecurity do?
-  - Update server (update, upgrade, dist-upgrade, autoremove, autoclean, updatedb)
+  - Updates server (update, upgrade, dist-upgrade, autoremove, autoclean, updatedb)
   - Change SSH Port 
   - Install Fail2ban
   - Whitelist your IP on Fail2Ban
