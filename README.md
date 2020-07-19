@@ -17,6 +17,10 @@ chmod +x onestopsecurity.sh
 ./onestopsecurity.sh
 ```
 
-Has been tested on Ubuntu 20.04 
+OneStopSecurity has been tested on:
+  - Ubuntu 20.04
+  - Ubuntu 18.04
+  - Debian 10.3
+  - Debian 9.12
 
 If you would like any additional features please submit an Issue or Pull request.
