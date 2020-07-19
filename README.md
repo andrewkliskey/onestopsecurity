@@ -15,7 +15,7 @@ Do you need it?
 Is it rated highly?
 Could it be installing malware?
 
-Personally I would't trust a random script on the internet. So I understand if you don't, as this is only 150 lines of code I suggest that you take a look to ensure it is something you wanna run on your server.
+Personally I would't trust a random script on the internet. So I understand if you don't, as this is only 150 lines of code I suggest that you take a look and ensure it is something you want to run on your server.
 
 
 ### How to run:
