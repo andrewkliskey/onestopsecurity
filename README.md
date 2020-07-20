@@ -1,5 +1,5 @@
 # OneStopSecurity
-The plan for OneStopSecurity is to have a single program that can complete the security aspect of your server in 5 minutes rather than taking 45 minutes.
+The plan for OneStopSecurity is to have a single program that can setup the security aspect of your server in 5 minutes rather than taking 45 minutes.
 
 
 ### What can OneStopSecurity do?
