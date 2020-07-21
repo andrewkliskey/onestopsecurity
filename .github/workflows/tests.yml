@@ -13,6 +13,7 @@ jobs:
     - name: Test script execution
       run: |
         sed -i '2 i set -e' onestopsecurity.sh
+        sed -i '/systemctl/d' onestopsecurity.sh
         chmod +x onestopsecurity.sh
         printf 'y\ny\n22\ny\ny\n127.0.0.1\ny\ny\n12345\nn\ny\ny\n' | ./onestopsecurity.sh
   ubuntu-18:
@@ -22,6 +23,7 @@ jobs:
     - name: Test script execution
       run: |
         sed -i '2 i set -e' onestopsecurity.sh
+        sed -i '/systemctl/d' onestopsecurity.sh
         chmod +x onestopsecurity.sh
         printf 'y\ny\n22\ny\ny\n127.0.0.1\ny\ny\n12345\nn\ny\ny\n' | ./onestopsecurity.sh
   ubuntu-16:
@@ -31,5 +33,6 @@ jobs:
     - name: Test script execution
       run: |
         sed -i '2 i set -e' onestopsecurity.sh
+        sed -i '/systemctl/d' onestopsecurity.sh
         chmod +x onestopsecurity.sh
         printf 'y\ny\n22\ny\ny\n127.0.0.1\ny\ny\n12345\nn\ny\ny\n' | ./onestopsecurity.sh
