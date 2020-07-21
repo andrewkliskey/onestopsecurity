@@ -21,7 +21,7 @@ The plan for OneStopSecurity is to have a single program that can setup the secu
   - Is it rated highly? ⭐️
   - Could it be installing malware? 😈
 
-Personally I would't trust a random script on the internet 🌐 so I understand if you don't. \
+Personally I would't trust a random script on the internet 🌐  so I understand if you don't. \
 As this is only 150 lines of code I suggest that you take a look and ensure it is something you want to run on your server.
 
 ### How to run
@@ -59,7 +59,7 @@ wget -O - https://raw.githubusercontent.com/andrewkliskey/onestopsecurity/master
 
 If you would like any additional features please submit an Issue or Pull request.
 
-A special thanks to the contributors
+A special thanks to the contributors \
 <a href="https://github.com/andrewkliskey/OneStopSecurity/graphs/contributors">
   <img alt="Made with contributors-img https://contributors-img.web.app" src="https://contributors-img.web.app/image?repo=andrewkliskey/OneStopSecurity" />
 </a>
