@@ -24,7 +24,7 @@ housekeeping() {
 
 changesshport() {
     read -p "What port would you like to use for SSH (Ideally use an Ephemeral Port 32768-60999): " sshport
-    echo "Port $sshport" >> $sshconfig
+    echo "Port $sshport" | sudo tee -a $sshconfig
 }
 
 fail2bansetup(){
