@@ -31,8 +31,8 @@ fail2bansetup(){
     sudo apt install fail2ban -y
     sudo cp /etc/fail2ban/fail2ban.conf /etc/fail2ban/fail2ban.local
     sudo cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local
-    systemctl start fail2ban
-    systemctl enable fail2ban
+    sudo systemctl start fail2ban
+    sudo systemctl enable fail2ban
     
 }
 fail2banwhitelist(){
