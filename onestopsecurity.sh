@@ -15,7 +15,8 @@ update() {
 }
 
 housekeeping() {
-
+    
+    sudo apt-get install mlocate -y;
     sudo apt-get autoremove -y;
     sudo apt-get autoclean -y;
     sudo updatedb;
@@ -23,15 +24,15 @@ housekeeping() {
 
 changesshport() {
     read -p "What port would you like to use for SSH (Ideally use an Ephemeral Port 32768-60999): " sshport
-    echo "Port $sshport" >> $sshconfig
+    echo "Port $sshport" | sudo tee -a $sshconfig
 }
 
 fail2bansetup(){
     sudo apt install fail2ban -y
     sudo cp /etc/fail2ban/fail2ban.conf /etc/fail2ban/fail2ban.local
     sudo cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local
-    systemctl start fail2ban
-    systemctl enable fail2ban
+    sudo systemctl start fail2ban
+    sudo systemctl enable fail2ban
     
 }
 fail2banwhitelist(){
