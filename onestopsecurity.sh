@@ -117,7 +117,7 @@ echo 'UFW (Uncomplicated Firewall) is a popular firewall software for blocking p
 echo 'More info can be found here https://en.wikipedia.org/wiki/Uncomplicated_Firewall and here https://www.linux.com/training-tutorials/introduction-uncomplicated-firewall-ufw/'
 echo 'This is setup to block everything incomming by default (You can allow ports via this program) and allow everything outgoing'
 read -p "Do you want to install UFW? (y/n): " ufwanswer
-if [ "$ufwanswer"!= "${ufwanswer#[Yy]}" ]; 
+if [ "$ufwanswer" != "${ufwanswer#[Yy]}" ]; 
     then
     ufwsetup
 fi
