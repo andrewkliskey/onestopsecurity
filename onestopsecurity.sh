@@ -68,8 +68,7 @@ echo ' '
 echo '--------Update and Upgrade--------'
 read -p "Before we start, do you want to update all packages? (update, upgrade, dist-upgrade, autoremove, autoclean, updatedb) (y/n): " updateanswer
  
-if [ "$updateanswer" == "y" ]; 
-    then
+if [ "$updateanswer" != "${updateanswer#[Yy]}" ]; then
     update
     housekeeping
     echo 
@@ -84,12 +83,10 @@ echo 'To reduce the risk of automated (bot) attacks, it is good practice to chan
 read -p "Do you want to change the SSH port? (y/n): " sshanswer
 
 
-if [ "$sshanswer" == "y" ]; 
-    then
+if [ "$sshanswer" != "${sshanswer#[Yy]}" ]; then
 
     #This makes sure that the SSH config file is valid
-    if [ -f "$sshconfig" ]
-    then
+    if [ -f "$sshconfig" ]; then
         echo "SSH config found."
         changesshport
     else
@@ -103,13 +100,13 @@ echo
 echo '--------Fail2ban--------'
 echo 'Fail2Ban is an intrusion prevention software framework that protects computer servers from brute-force attacks. - https://www.fail2ban.org'
 read -p "Do you want to install Fail2ban? (y/n): " fail2bananswer
-if [ "$fail2bananswer" == "y" ]; 
+if [ "$fail2bananswer"!= "${fail2bananswer#[Yy]}" ]; 
     then
     fail2bansetup
 fi
 echo 
     read -p "Would you like to whitelist an IP on fail2ban (y/n): " fail2banwhitelistanswer
-    if [ "$fail2bananswer" == "y" ]; 
+    if [ "$fail2banwhitelistanswer" != "${fail2banwhitelistanswer#[Yy]}" ]; 
         then
         fail2banwhitelist
     fi
@@ -120,13 +117,13 @@ echo 'UFW (Uncomplicated Firewall) is a popular firewall software for blocking p
 echo 'More info can be found here https://en.wikipedia.org/wiki/Uncomplicated_Firewall and here https://www.linux.com/training-tutorials/introduction-uncomplicated-firewall-ufw/'
 echo 'This is setup to block everything incomming by default (You can allow ports via this program) and allow everything outgoing'
 read -p "Do you want to install UFW? (y/n): " ufwanswer
-if [ "$ufwanswer" == "y" ]; 
+if [ "$ufwanswer"!= "${ufwanswer#[Yy]}" ]; 
     then
     ufwsetup
 fi
 echo
 read -p "Would you like to allow any additional ports? (y/n): " additionalports
-while [ "$additionalports" == "y" ]; 
+while [ "$additionalports" != "${additionalports#[Yy]}" ]; 
     do
     ufwportsetup
 done
@@ -135,13 +132,13 @@ echo
 echo '--------Unattended Upgrades--------'
 echo 'The purpose of unattended-upgrades is to keep the computer current with the latest security (and other) updates automatically. '
 read -p "Would you like to install unattended-upgrades? (y/n): " unattendedupgradesanswer
-if [ "$unattendedupgradesanswer" == "y" ]; 
+if [ "$unattendedupgradesanswer" != "${unattendedupgradesanswer#[Yy]}" ]; 
     then
     sudo apt install unattended-upgrades -y
 fi
 
 
-if [ "$sshanswer" == "y" ]; 
+if [ "$sshanswer" != "${sshanswer#[Yy]}" ]; 
     then
     echo "Please now SSH to your server over port $sshport"
 
