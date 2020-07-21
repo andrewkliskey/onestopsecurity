@@ -100,7 +100,7 @@ echo
 echo '--------Fail2ban--------'
 echo 'Fail2Ban is an intrusion prevention software framework that protects computer servers from brute-force attacks. - https://www.fail2ban.org'
 read -p "Do you want to install Fail2ban? (y/n): " fail2bananswer
-if [ "$fail2bananswer"!= "${fail2bananswer#[Yy]}" ]; 
+if [ "$fail2bananswer" != "${fail2bananswer#[Yy]}" ]; 
     then
     fail2bansetup
 fi
