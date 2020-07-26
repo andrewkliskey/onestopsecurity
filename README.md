@@ -6,7 +6,7 @@ The plan for OneStopSecurity is to have a single program that can setup the secu
 
 ### What can OneStopSecurity do?
 
-- Updates server (update, upgrade, dist-upgrade, autoremove, autoclean, updatedb)
+- Updates server (update, upgrade, dist-upgrade, autoremove, autoclean, updatedb, mlocate)
 - Change SSH Port 
 - Install Fail2ban
 - Whitelist your IP on Fail2Ban
