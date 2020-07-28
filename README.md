@@ -53,7 +53,7 @@ wget -O - https://raw.githubusercontent.com/andrewkliskey/onestopsecurity/master
   - [ ] Add validation to user inputs
   - [ ] Adjust the Fail2ban config
   - [ ] Allow users to change the SSH port more than once (currently running it twice will open both ports up for SSH).
-    
+  - [ ] Disable ICMP traffic via UFW 
   
 ### Contributions
 
