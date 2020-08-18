@@ -52,9 +52,9 @@ wget -O - https://raw.githubusercontent.com/andrewkliskey/onestopsecurity/master
   - [ ] Disable SSH root access. This can be done manually by adding a `#` in front of `PermitRootLogin yes` within the SSH config file `/etc/ssh/sshd_config`.
   - [ ] Add validation to user inputs
   - [ ] Adjust the Fail2ban config
-  - [ ] Allow users to change the SSH port more than once (currently running it twice will open both ports up for SSH).
   - [X] Disable ICMP traffic via UFW 
   - [X] Add Continuous Integration with Github Actions
+  - [x] SSH Port bug fix (Changing the SSH port twice would open up both ports for SSH)
   
 ### Contributions
 
