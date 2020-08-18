@@ -60,8 +60,8 @@ disableicmp(){
 restartservices() {
     sudo systemctl restart ssh
     sudo ufw enable
+    sudo ufw reload
     sudo ufw status
-
 }
 
 #Intro
