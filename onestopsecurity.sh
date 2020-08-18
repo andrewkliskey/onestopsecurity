@@ -24,7 +24,7 @@ changesshport() {
     read -p "What port would you like to use for SSH (Ideally use an Ephemeral Port 32768-60999): " sshport
     #echo "Port $sshport" | sudo tee -a $sshconfig
     #This will replace the current port in the SSH config to the user input
-    sed -i "s/.*Port .*/Port $sshport/" $sshconfig
+    sudo sed -i "s/.*Port .*/Port $sshport/" $sshconfig
 }
 
 fail2bansetup(){
