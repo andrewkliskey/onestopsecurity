@@ -12,6 +12,7 @@ The plan for OneStopSecurity is to have a single program that can setup the secu
 - Whitelist your IP on Fail2Ban
 - Install UFW Firewall (Deny Incoming/Allow Outgoing)
 - Choose Ports to allow incoming connections from
+- Disable ICMP traffic
 - Install unattended-upgrades
 
 ### Take a think
