@@ -28,7 +28,7 @@ newuser(){
     read -p "Would you like to make $nameofuser a sudo user " sudoanswer
  
     if [ "$sudoanswer" != "${sudoanswer#[Yy]}" ]; then
-        adduser $nameofuser sudo
+        sudo adduser $nameofuser sudo
     fi
 
 
