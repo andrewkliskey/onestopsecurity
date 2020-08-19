@@ -20,6 +20,19 @@ housekeeping() {
     sudo updatedb;
 }
 
+newuser(){
+    read -p "Name of the user: " nameofuser
+    adduser $nameofuser
+    echo The user $nameofuser has been created.
+    
+    read -p "Would you like to make $nameofuser a sudo user " sudoanswer
+ 
+    if [ "$sudoanswer" != "${sudoanswer#[Yy]}" ]; then
+        adduser $nameofuser sudo
+    fi
+
+
+}
 changesshport() {
     read -p "What port would you like to use for SSH (Ideally use an Ephemeral Port 32768-60999): " sshport
     #echo "Port $sshport" | sudo tee -a $sshconfig
@@ -79,6 +92,15 @@ if [ "$updateanswer" != "${updateanswer#[Yy]}" ]; then
     echo 
     echo "- Update Complete! -"
     echo 
+fi
+
+echo 
+echo '--------New User--------'
+echo 'It is highly recommended not to use the root user. It is suggested that you use a sudo user instead.'
+read -p "Do you want to create a new user? (y/n): " newuseranswer
+if [ "$newuseranswer" != "${newuseranswer#[Yy]}" ]; 
+    then
+    newuser
 fi
 
 echo 
@@ -155,7 +177,6 @@ if [ "$sshanswer" != "${sshanswer#[Yy]}" ];
     echo "Please now SSH to your server over port $sshport"
 
 fi
-restartservices
 
 echo "----------------------"
 echo "Thanks for using OneStopSecurity"
