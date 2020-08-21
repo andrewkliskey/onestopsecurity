@@ -25,7 +25,7 @@ newuser(){
     adduser $nameofuser
     echo The user $nameofuser has been created.
     
-    read -p "Would you like to make $nameofuser a sudo user " sudoanswer
+    read -p "Make $nameofuser a sudo user? (y/n): " sudoanswer
  
     if [ "$sudoanswer" != "${sudoanswer#[Yy]}" ]; then
         sudo adduser $nameofuser sudo
@@ -34,7 +34,7 @@ newuser(){
 
 }
 changesshport() {
-    read -p "What port would you like to use for SSH (Ideally use an Ephemeral Port 32768-60999): " sshport
+    read -p "New port for SSH (Ideally use an Ephemeral Port 32768-60999): " sshport
     #echo "Port $sshport" | sudo tee -a $sshconfig
     #This will replace the current port in the SSH config to the user input
     sudo sed -i "s/.*Port .*/Port $sshport/" $sshconfig
@@ -49,7 +49,7 @@ fail2bansetup(){
 }
 
 fail2banwhitelist(){
-    read -p "Enter your WAN IP (Find it here: https://duckduckgo.com/?q=ip ): " whitelistip
+    read -p "Enter WAN IP (Find it here: https://duckduckgo.com/?q=ip ): " whitelistip
     sudo fail2ban-client set sshd addignoreip $whitelistip
 }
 
@@ -84,7 +84,7 @@ echo 'OneStopSecurity'
 echo 'Lets get started, there is no time to waste!'
 echo
 echo '--------Update and Upgrade--------'
-read -p "Before we start, do you want to update all packages? (update, upgrade, dist-upgrade, autoremove, autoclean, updatedb, mlocate) (y/n): " updateanswer
+read -p "Would you update the server? (update, upgrade, dist-upgrade, autoremove, autoclean, updatedb, mlocate) (y/n): " updateanswer
  
 if [ "$updateanswer" != "${updateanswer#[Yy]}" ]; then
     update
