@@ -8,7 +8,8 @@ The plan for OneStopSecurity is to have a single program that can setup the secu
 
 - Updates server (update, upgrade, dist-upgrade, autoremove, autoclean, updatedb, mlocate)
 - Create sudo user
-- Change SSH Port 
+- Change SSH Port
+- Disable root SSH Login
 - Install Fail2ban
 - Whitelist your IP on Fail2Ban
 - Install UFW Firewall (Deny Incoming/Allow Outgoing)
@@ -50,12 +51,12 @@ wget -O - https://raw.githubusercontent.com/andrewkliskey/onestopsecurity/master
 
 ### To-do
 
-  - [ ] Disable SSH root access. This can be done manually by adding a `#` in front of `PermitRootLogin yes` within the SSH config file `/etc/ssh/sshd_config`.
   - [ ] Add validation to user inputs
   - [ ] Adjust the Fail2ban config
   - [X] Disable ICMP traffic via UFW 
   - [X] Add Continuous Integration with Github Actions
   - [x] SSH Port bug fix (Changing the SSH port twice would open up both ports for SSH)
+  - [x] Disable SSH root access.
   
 ### Contributions
 
