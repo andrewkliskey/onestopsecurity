@@ -30,14 +30,18 @@ newuser(){
     if [ "$sudoanswer" != "${sudoanswer#[Yy]}" ]; then
         sudo adduser $nameofuser sudo
     fi
-
-
 }
+
 changesshport() {
     read -p "New port for SSH (Ideally use an Ephemeral Port 32768-60999): " sshport
-    #echo "Port $sshport" | sudo tee -a $sshconfig
     #This will replace the current port in the SSH config to the user input
     sudo sed -i "s/.*Port .*/Port $sshport/" $sshconfig
+    sudo systemctl restart ssh
+}
+
+disablerootssh() {
+    sudo sed -i "s/PermitRootLogin yes/#PermitRootLogin yes/" $sshconfig
+    sudo systemctl restart ssh
 }
 
 fail2bansetup(){
@@ -73,7 +77,6 @@ disableicmp(){
 }
 
 restartservices() {
-    sudo systemctl restart ssh
     sudo ufw enable
     sudo ufw reload
     sudo ufw status
@@ -118,6 +121,16 @@ if [ "$sshanswer" != "${sshanswer#[Yy]}" ]; then
         echo "Error, ssh config file was not found. It is expected be to located at $sshconfig '"
     fi
 
+fi
+
+echo
+echo '--------Disable root on SSH--------'
+echo 'It is not advisable and even dangerous to leave your VPS accessible through the root user, as this account can perform irreversible operations on your server.'
+read -p "Disable SSH via root? (Only recommended if you have setup a sudo user) (y/n): " sshrootanswer
+
+if [ "$sshrootanswer" != "${sshrootanswer#[Yy]}" ]; 
+    then
+    disablerootssh
 fi
 
 echo 
@@ -174,8 +187,8 @@ fi
 
 if [ "$sshanswer" != "${sshanswer#[Yy]}" ]; 
     then
+    restartservices
     echo "Please now SSH to your server over port $sshport"
-
 fi
 
 echo "----------------------"
